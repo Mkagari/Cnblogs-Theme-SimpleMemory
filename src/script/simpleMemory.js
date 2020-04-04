@@ -379,7 +379,7 @@ function init() {
 // get file url
 function getJsDelivrUrl(file, directory) {
     file = setFileNameMin(file, directory);
-    return 'https://cdn.jsdelivr.net/gh/'+(window.cnblogsConfig.GhUserName)+'/'+(window.cnblogsConfig.GhRepositories)+'@'+(window.cnblogsConfig.GhVersions)+'/' + (file ? file : '');
+    return 'https://mkagari.github.io/Cnblogs-Theme-SimpleMemory/' + (file ? file : '');
 }
 
 // optimization file name
@@ -399,7 +399,7 @@ function setFileNameMin(file, directory) {
             case 'css':directory = 'style';break;
         }
     }
-    file.search('.min') === -1 && fileArr.push('min');
+    //file.search('.min') === -1 && fileArr.push('min');
     suffix != null && fileArr.push(suffix);
     return (typeof directory !== 'undefined' ? ('src/' + directory + '/' + fileArr.join('.')) : (fileArr.join('.')));
 }
